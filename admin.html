@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin – Pronostics VIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0f0f0;
+      color: #333;
+    }
+    header {
+      background: #b01e1e;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 15px;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    input, button {
+      margin: 5px 0;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    button {
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #002244;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin – Pronostics VIP</h1>
+    <p>Espace réservé à l’administrateur uniquement</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Activer / Désactiver VIP</h2>
+      <p>Entrer l’ID abonné (ex: USER-12345) :</p>
+      <input type="text" id="inputId" placeholder="ID abonné" />
+      <br />
+      <button onclick="alert('ID abonné : ' + document.getElementById('inputId').value + '
+Statut VIP : Actif (1 mois).')">Activer VIP 1 mois</button>
+      <button onclick="alert('ID abonné : ' + document.getElementById('inputId').value + '
+Statut VIP : Désactivé.');">Désactiver VIP</button>
+    </section>
+
+    <section>
+      <h2>Générer une clé VIP</h2>
+      <p>Clé format : VIP-IDABONNE-RANDOM (ex: VIP-12345-ABC123).</p>
+      <input type="text" id="inputIdVip" placeholder="ID abonné" />
+      <br />
+      <button onclick="alert('Clé VIP générée : VIP-' + document.getElementById('inputIdVip').value + '-ABC123
+Lien: https://prono-ai-4rj5.onrender.com/welcome?vip=VIP-' + document.getElementById('inputIdVip').value + '-ABC123');">
+        Générer clé VIP
+      </button>
+    </section>
+
+    <section>
+      <h2>Recharge et points</h2>
+      <p>Recharge : +225 01 00 96 78 75</p>
+      <p>Quand l’abonné paie, tu peux créditer ses points ici (en vrai, tu ajusteras plus tard dans une base de données).</p>
+    </section>
+
+    <section>
+      <h2>Parrainage</h2>
+      <p>Points par parrainage : 200 F (20 points)</p>
+      <p>Credite 20 points au parrain après vérification de la recharge.</p>
+    </section>
+  </main>
+</body>
+</html>
